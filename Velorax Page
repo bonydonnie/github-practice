@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VELORAX — Technology, Elevated.</title>
+
+<style>
+/* =========================================================
+   VELORAX — LUXURY TECH STORE
+   ========================================================= */
+
+:root {
+    --black: #080808;
+    --dark: #111111;
+    --white: #ffffff;
+    --cream: #f5f5f1;
+    --gray: #777;
+    --light-gray: #e5e5df;
+    --border: #d8d8d2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cream);
+    color: var(--black);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+/* =========================================================
+   ANNOUNCEMENT
+   ========================================================= */
+
+.announcement {
+    height: 38px;
+    background: var(--black);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.navbar {
+    height: 80px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(245,245,241,0.94);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.nav-container {
+    max-width: 1400px;
+    height: 100%;
+
+    margin: auto;
+    padding: 0 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: 7px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.nav-links a {
+    transition: opacity .2s;
+}
+
+.nav-links a:hover {
+    opacity: .5;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+.cart-button {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+
+    top: -10px;
+    right: -12px;
+
+    width: 19px;
+    height: 19px;
+
+    border-radius: 50%;
+
+    background: black;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 9px;
+}
+
+.mobile-menu-button {
+    display: none;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    min-height: 760px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.88),
+            rgba(0,0,0,.48),
+            rgba(0,0,0,.1)
+        ),
+        radial-gradient(
+            circle at 80% 50%,
+            #4b4b4b,
+            #151515 45%,
+            #050505 75%
+        );
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    max-width: 1400px;
+    width: 100%;
+
+    margin: auto;
+    padding: 80px 35px;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(60px, 9vw, 130px);
+
+    line-height: .88;
+
+    letter-spacing: -7px;
+
+    max-width: 900px;
+}
+
+.hero-text {
+    max-width: 500px;
+
+    color: #d5d5d5;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin: 30px 0;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.button {
+    padding: 16px 28px;
+
+    border: 1px solid black;
+
+    text-transform: uppercase;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.button-white {
+    background: white;
+    color: black;
+    border-color: white;
+}
+
+.button-white:hover {
+    background: transparent;
+    color: white;
+}
+
+.text-link {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid white;
+
+    padding-bottom: 4px;
+}
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.section {
+    padding: 110px 35px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    margin-bottom: 45px;
+}
+
+.section-title {
+    font-size: clamp(42px, 6vw, 75px);
+
+    letter-spacing: -5px;
+
+    line-height: .95;
+}
+
+.view-all {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+/* =========================================================
+   PRODUCTS
+   ========================================================= */
+
+.products {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.product {
+    cursor: pointer;
+}
+
+.product-image {
+    height: 390px;
+
+    background: #e5e5df;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.product-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #555,
+            transparent 30%
+        );
+
+    opacity: .8;
+
+    transition: transform .7s;
+}
+
+.product:hover .product-image::after {
+    transform: scale(1.15);
+}
+
+.product-badge {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    z-index: 2;
+
+    background: black;
+    color: white;
+
+    padding: 7px 10px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.product-info {
+    padding: 16px 3px;
+}
+
+.product-info-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.product-name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.product-price {
+    font-size: 13px;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 13px;
+}
+
+.stars {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.add-button {
+    border: none;
+    border-bottom: 1px solid black;
+
+    background: none;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
+
+/* =========================================================
+   BENEFITS
+   ========================================================= */
+
+.benefits {
+    background: black;
+    color: white;
+
+    padding: 70px 35px;
+}
+
+.benefit-grid {
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 40px;
+}
+
+.benefit-icon {
+    font-size: 25px;
+
+    margin-bottom: 18px;
+}
+
+.benefit h3 {
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+.benefit p {
+    color: #999;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+/* =========================================================
+   EDITORIAL
+   ========================================================= */
+
+.editorial {
+    display: grid;
+
+    grid-template-columns: 1.15fr .85fr;
+
+    min-height: 650px;
+}
+
+.editorial-image {
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            #777,
+            #222 40%,
+            #090909
+        );
+}
+
+.editorial-content {
+    background: #e7e7e2;
+
+    padding: 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.editorial-content h2 {
+    font-size: clamp(45px, 6vw, 80px);
+
+    line-height: .95;
+
+    letter-spacing: -5px;
+}
+
+.editorial-content p {
+    max-width: 470px;
+
+    color: #555;
+
+    line-height: 1.8;
+
+    margin: 30px 0;
+}
+
+/* =========================================================
+   REVIEWS
+   ========================================================= */
+
+.reviews {
+    background: #e7e7e2;
+
+    padding: 110px 35px;
+}
+
+.review-grid {
+    max-width: 1400px;
+
+    margin: 45px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 20px;
+}
+
+.review {
+    background: #f5f5f1;
+
+    padding: 40px;
+
+    min-height: 270px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.review-text {
+    font-size: 21px;
+
+    line-height: 1.3;
+
+    margin: 25px 0;
+}
+
+.review-name {
+    margin-top: auto;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+/* =========================================================
+   NEWSLETTER
+   ========================================================= */
+
+.newsletter {
+    text-align: center;
+
+    padding: 130px 35px;
+}
+
+.newsletter h2 {
+    font-size: clamp(45px,6vw,80px);
+
+    letter-spacing: -5px;
+}
+
+.newsletter p {
+    max-width: 500px;
+
+    margin: 25px auto 35px;
+
+    color: #666;
+}
+
+.newsletter-form {
+    max-width: 500px;
+
+    margin: auto;
+
+    display: flex;
+}
+
+.newsletter-form input {
+    flex: 1;
+
+    border: 1px solid #bbb;
+
+    background: white;
+
+    padding: 16px;
+}
+
+.newsletter-form button {
+    border: none;
+
+    background: black;
+
+    color: white;
+
+    padding: 0 25px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background: black;
+
+    color: white;
+
+    padding: 80px 35px 25px;
+}
+
+.footer-grid {
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+
+    gap: 70px;
+}
+
+.footer-logo {
+    font-size: 22px;
+
+    font-weight: 900;
+
+    letter-spacing: 7px;
+}
+
+.footer p {
+    color: #888;
+
+    line-height: 1.7;
+
+    max-width: 350px;
+}
+
+.footer h3 {
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    display: block;
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    margin: 10px 0;
+}
+
+.footer-bottom {
+    max-width: 1400px;
+
+    margin: 70px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #333;
+
+    color: #666;
+
+    font-size: 10px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+/* =========================================================
+   CART
+   ========================================================= */
+
+.cart-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.5);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .3s;
+
+    z-index: 2000;
+}
+
+.cart-overlay.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+.cart {
+    position: absolute;
+
+    right: 0;
+
+    top: 0;
+
+    height: 100%;
+
+    width: min(450px,90%);
+
+    background: #f5f5f1;
+
+    padding: 35px;
+
+    transform: translateX(100%);
+
+    transition: .35s;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.cart-overlay.active .cart {
+    transform: translateX(0);
+}
+
+.cart-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #ccc;
+}
+
+.close {
+    border: none;
+
+    background: none;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+.cart-items {
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 20px 0;
+}
+
+.cart-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item button {
+    border: none;
+
+    background: none;
+
+    text-decoration: underline;
+
+    cursor: pointer;
+
+    font-size: 10px;
+}
+
+.cart-footer {
+    border-top: 1px solid #ccc;
+
+    padding-top: 20px;
+}
+
+.cart-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 18px;
+
+    margin-bottom: 20px;
+}
+
+.checkout {
+    width: 100%;
+
+    border: none;
+
+    background: black;
+
+    color: white;
+
+    padding: 18px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.search-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.6);
+
+    z-index: 3000;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .3s;
+}
+
+.search-overlay.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+.search-box {
+    background: #f5f5f1;
+
+    padding: 80px 35px;
+}
+
+.search-inner {
+    max-width: 900px;
+
+    margin: auto;
+
+    display: flex;
+}
+
+.search-inner input {
+    flex: 1;
+
+    border: none;
+
+    border-bottom: 1px solid black;
+
+    background: transparent;
+
+    font-size: 35px;
+
+    padding: 15px;
+}
+
+.search-inner button {
+    border: none;
+
+    background: black;
+
+    color: white;
+
+    padding: 0 30px;
+
+    cursor: pointer;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width: 1000px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .products {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .benefit-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .editorial {
+        grid-template-columns: 1fr;
+    }
+
+    .editorial-image {
+        min-height: 500px;
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .nav-container {
+        padding: 0 18px;
+    }
+
+    .logo {
+        font-size: 18px;
+        letter-spacing: 5px;
+    }
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero-container {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+        letter-spacing: -4px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section {
+        padding: 75px 18px;
+    }
+
+    .section-title {
+        font-size: 45px;
+    }
+
+    .products {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 20px 10px;
+    }
+
+    .product-image {
+        height: 230px;
+    }
+
+    .benefits {
+        padding: 60px 18px;
+    }
+
+    .benefit-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .editorial-content {
+        padding: 65px 25px;
+    }
+
+    .editorial-content h2 {
+        font-size: 50px;
+    }
+
+    .reviews {
+        padding: 75px 18px;
+    }
+
+    .newsletter {
+        padding: 80px 18px;
+    }
+
+    .newsletter h2 {
+        font-size: 50px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter-form button {
+        padding: 16px;
+    }
+
+    footer {
+        padding: 65px 18px 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ======================================================
+     ANNOUNCEMENT
+====================================================== -->
+
+<div class="announcement">
+    FREE SHIPPING ON ORDERS $50+
+</div>
+
+<!-- ======================================================
+     NAVIGATION
+====================================================== -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <button class="nav-button mobile-menu-button"
+                onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <a href="#" class="logo">
+            VELORAX
+        </a>
+
+        <div class="nav-links">
+
+            <a href="#shop">
+                Shop
+            </a>
+
+            <a href="#bestsellers">
+                Best Sellers
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#reviews">
+                Reviews
+            </a>
+
+        </div>
+
+        <div class="nav-actions">
+
+            <button
+                class="nav-button"
+                onclick="openSearch()">
+                ⌕
+            </button>
+
+            <button
+                class="nav-button cart-button"
+                onclick="openCart()">
+
+                Bag
+
+                <span
+                    class="cart-count"
+                    id="cartCount">
+                    0
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+
+<section class="hero">
+
+    <div class="hero-container">
+
+        <p class="eyebrow">
+            THE EVERYDAY UPGRADE
+        </p>
+
+        <h1>
+            TECHNOLOGY.<br>
+            ELEVATED.
+        </h1>
+
+        <p class="hero-text">
+            Premium technology designed to fit beautifully
+            into your everyday life.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                href="#shop"
+                class="button button-white">
+                Shop Collection
+            </a>
+
+            <a
+                href="#about"
+                class="text-link">
+                Discover VeloraX
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     BEST SELLERS
+====================================================== -->
+
+<section
+    class="section"
+    id="shop">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    CURATED FOR YOU
+                </p>
+
+                <h2 class="section-title">
+                    BEST<br>
+                    SELLERS
+                </h2>
+
+            </div>
+
+            <a href="#" class="view-all">
+                View All →
+            </a>
+
+        </div>
+
+        <div class="products">
+
+            <!-- PRODUCT 1 -->
+
+            <div class="product">
+
+                <div class="product-image">
+
+                    <span class="product-badge">
+                        Bestseller
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-info-top">
+
+                        <span class="product-name">
+                            SnapCharge™
+                        </span>
+
+                        <span class="product-price">
+                            $39.99
+                        </span>
+
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <span class="stars">
+                            ★★★★★
+                        </span>
+
+                        <button
+                            class="add-button"
+                            onclick="addToCart('SnapCharge™',39.99)">
+                            Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product">
+
+                <div class="product-image">
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-info-top">
+
+                        <span class="product-name">
+                            VeloraPods Pro
+                        </span>
+
+                        <span class="product-price">
+                            $59.99
+                        </span>
+
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <span class="stars">
+                            ★★★★★
+                        </span>
+
+                        <button
+                            class="add-button"
+                            onclick="addToCart('VeloraPods Pro',59.99)">
+                            Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT 3 -->
+
+            <div class="product">
+
+                <div class="product-image">
+
+                    <span class="product-badge">
+                        New
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-info-top">
+
+                        <span class="product-name">
+                            VeloraHub™
+                        </span>
+
+                        <span class="product-price">
+                            $49.99
+                        </span>
+
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <span class="stars">
+                            ★★★★★
+                        </span>
+
+                        <button
+                            class="add-button"
+                            onclick="addToCart('VeloraHub™',49.99)">
+                            Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT 4 -->
+
+            <div class="product">
+
+                <div class="product-image">
+
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-info-top">
+
+                        <span class="product-name">
+                            VeloraWatch
+                        </span>
+
+                        <span class="product-price">
+                            $89.99
+                        </span>
+
+                    </div>
+
+                    <div class="product-bottom">
+
+                        <span class="stars">
+                            ★★★★★
+                        </span>
+
+                        <button
+                            class="add-button"
+                            onclick="addToCart('VeloraWatch',89.99)">
+                            Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     BENEFITS
+====================================================== -->
+
+<section class="benefits">
+
+    <div class="benefit-grid">
+
+        <div>
+
+            <div class="benefit-icon">
+                ⚡
+            </div>
+
+            <h3>
+                Fast Technology
+            </h3>
+
+            <p>
+                Powerful products designed for
+                modern everyday use.
+            </p>
+
+        </div>
+
+        <div>
+
+            <div class="benefit-icon">
+                ◆
+            </div>
+
+            <h3>
+                Premium Design
+            </h3>
+
+            <p>
+                Minimal designs that look as good
+                as they perform.
+            </p>
+
+        </div>
+
+        <div>
+
+            <div class="benefit-icon">
+                ✓
+            </div>
+
+            <h3>
+                Quality First
+            </h3>
+
+            <p>
+                Products selected with quality
+                and reliability in mind.
+            </p>
+
+        </div>
+
+        <div>
+
+            <div class="benefit-icon">
+                ◇
+            </div>
+
+            <h3>
+                Secure Checkout
+            </h3>
+
+            <p>
+                A simple and secure shopping
+                experience from start to finish.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     EDITORIAL
+====================================================== -->
+
+<section
+    class="editorial"
+    id="about">
+
+    <div class="editorial-image"></div>
+
+    <div class="editorial-content">
+
+        <p class="eyebrow">
+            WHY VELORAX
+        </p>
+
+        <h2>
+            BUILT TO LOOK
+            AS GOOD AS IT
+            WORKS.
+        </h2>
+
+        <p>
+            VeloraX brings together useful technology
+            and refined design to create products that
+            belong naturally in your lifestyle.
+        </p>
+
+        <a href="#shop"
+           class="view-all"
+           style="width:max-content">
+            Explore VeloraX →
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     REVIEWS
+====================================================== -->
+
+<section
+    class="reviews"
+    id="reviews">
+
+    <div class="container">
+
+        <p class="eyebrow">
+            LOVED BY OUR CUSTOMERS
+        </p>
+
+        <h2 class="section-title">
+            WHAT PEOPLE<br>
+            ARE SAYING
+        </h2>
+
+        <div class="review-grid">
+
+            <div class="review">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="review-text">
+                    "The quality is honestly insane
+                    for the price. It feels like a
+                    premium product."
+                </p>
+
+                <span class="review-name">
+                    — Verified Customer
+                </span>
+
+            </div>
+
+            <div class="review">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="review-text">
+                    "The design is clean and shipping
+                    was incredibly fast."
+                </p>
+
+                <span class="review-name">
+                    — Verified Customer
+                </span>
+
+            </div>
+
+            <div class="review">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p class="review-text">
+                    "Definitely one of my favorite
+                    tech stores right now."
+                </p>
+
+                <span class="review-name">
+                    — Verified Customer
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     NEWSLETTER
+====================================================== -->
+
+<section class="newsletter">
+
+    <p class="eyebrow">
+        STAY CONNECTED
+    </p>
+
+    <h2>
+        GET THE NEXT<br>
+        DROP FIRST.
+    </h2>
+
+    <p>
+        Join the VeloraX list for new products,
+        exclusive offers and special releases.
+    </p>
+
+    <form
+        class="newsletter-form"
+        onsubmit="subscribe(event)">
+
+        <input
+            type="email"
+            placeholder="Your email address"
+            required>
+
+        <button type="submit">
+            Join
+        </button>
+
+    </form>
+
+</section>
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <div class="footer-logo">
+                VELORAX
+            </div>
+
+            <p style="margin-top:20px">
+                Technology, elevated.
+                Premium gadgets designed
+                for modern life.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>
+                Shop
+            </h3>
+
+            <a href="#shop">
+                Best Sellers
+            </a>
+
+            <a href="#shop">
+                New Arrivals
+            </a>
+
+            <a href="#shop">
+                All Products
+            </a>
+
+        </div>
+
+        <div>
+
+            <h3>
+                VeloraX
+            </h3>
+
+            <p>
+                Built around the idea that
+                everyday technology should
+                feel premium.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 VELORAX
+        </span>
+
+        <span>
+            TECHNOLOGY. ELEVATED.
+        </span>
+
+    </div>
+
+</footer>
+
+<!-- ======================================================
+     CART
+====================================================== -->
+
+<div
+    class="cart-overlay"
+    id="cartOverlay">
+
+    <div class="cart">
+
+        <div class="cart-header">
+
+            <h2>
+                YOUR BAG
+            </h2>
+
+            <button
+                class="close"
+                onclick="closeCart()">
+                ×
+            </button>
+
+        </div>
+
+        <div
+            class="cart-items"
+            id="cartItems">
+
+            <p style="color:#777">
+                Your bag is empty.
+            </p>
+
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>
+                    Subtotal
+                </span>
+
+                <strong id="cartTotal">
+                    $0.00
+                </strong>
+
+            </div>
+
+            <button
+                class="checkout"
+                onclick="checkout()">
+
+                Checkout
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ======================================================
+     SEARCH
+====================================================== -->
+
+<div
+    class="search-overlay"
+    id="searchOverlay">
+
+    <div class="search-box">
+
+        <button
+            class="close"
+            onclick="closeSearch()"
+            style="float:right">
+
+            ×
+
+        </button>
+
+        <div class="search-inner">
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Search VeloraX...">
+
+            <button
+                onclick="searchProducts()">
+                Search
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+/* =========================================================
+   CART SYSTEM
+   ========================================================= */
+
+let cart = [];
+
+function addToCart(name, price) {
+
+    const existing =
+        cart.find(item => item.name === name);
+
+    if(existing) {
+
+        existing.quantity++;
+
+    } else {
+
+        cart.push({
+            name: name,
+            price: price,
+            quantity: 1
+        });
+
+    }
+
+    updateCart();
+
+    openCart();
+}
+
+
+function removeFromCart(index) {
+
+    cart.splice(index,1);
+
+    updateCart();
+
+}
+
+
+function updateCart() {
+
+    const container =
+        document.getElementById("cartItems");
+
+    const count =
+        document.getElementById("cartCount");
+
+    const total =
+        document.getElementById("cartTotal");
+
+    let cartCount = 0;
+    let cartTotal = 0;
+
+    container.innerHTML = "";
+
+    if(cart.length === 0) {
+
+        container.innerHTML = `
+            <p style="color:#777">
+                Your bag is empty.
+            </p>
+        `;
+
+    }
+
+    cart.forEach((item,index) => {
+
+        cartCount += item.quantity;
+
+        cartTotal +=
+            item.price * item.quantity;
+
+        const element =
+            document.createElement("div");
+
+        element.className = "cart-item";
+
+        element.innerHTML = `
+
+            <div>
+
+                <strong>
+                    ${item.name}
+                </strong>
+
+                <p style="color:#777">
+                    $${item.price.toFixed(2)}
+                    × ${item.quantity}
+                </p>
+
+            </div>
+
+            <button
+                onclick="removeFromCart(${index})">
+
+                Remove
+
+            </button>
+
+        `;
+
+        container.appendChild(element);
+
+    });
+
+    count.textContent = cartCount;
+
+    total.textContent =
+        "$" + cartTotal.toFixed(2);
+
+}
+
+
+/* =========================================================
+   CART OPEN/CLOSE
+   ========================================================= */
+
+function openCart() {
+
+    document
+        .getElementById("cartOverlay")
+        .classList.add("active");
+
+}
+
+function closeCart() {
+
+    document
+        .getElementById("cartOverlay")
+        .classList.remove("active");
+
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+function openSearch() {
+
+    document
+        .getElementById("searchOverlay")
+        .classList.add("active");
+
+    setTimeout(() => {
+
+        document
+            .getElementById("searchInput")
+            .focus();
+
+    },200);
+
+}
+
+
+function closeSearch() {
+
+    document
+        .getElementById("searchOverlay")
+        .classList.remove("active");
+
+}
+
+
+function searchProducts() {
+
+    const query =
+        document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    if(query.trim() === "") {
+
+        return;
+
+    }
+
+    alert(
+        "Searching VeloraX for: " + query
+    );
+
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+function toggleMenu() {
+
+    alert(
+        "Mobile navigation opened."
+    );
+
+}
+
+
+/* =========================================================
+   NEWSLETTER
+   ========================================================= */
+
+function subscribe(event) {
+
+    event.preventDefault();
+
+    alert(
+        "Welcome to VeloraX!"
+    );
+
+}
+
+
+/* =========================================================
+   CHECKOUT
+   ========================================================= */
+
+function checkout() {
+
+    if(cart.length === 0) {
+
+        alert(
+            "Your bag is empty."
+        );
+
+        return;
+
+    }
+
+    alert(
+        "Connect this button to your Shopify checkout or payment processor."
+    );
+
+}
+
+</script>
+
+</body>
+</html>
